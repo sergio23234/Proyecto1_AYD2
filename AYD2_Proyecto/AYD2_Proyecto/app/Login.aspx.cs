@@ -12,7 +12,7 @@ public partial class app_Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
     }
 
     protected void btentrar_Click(object sender, EventArgs e)
@@ -62,13 +62,21 @@ public partial class app_Login : System.Web.UI.Page
             Session["password"] = password;
             Session["saldo"] = saldo;
             Session["correo"] = correo;
-            System.Diagnostics.Debug.WriteLine("Correcto");
+            Session["error_login"] = null;
+            Response.Write("<script>alert('Bienvenido " + nombres + " " + apellidos +"');</script>");
+            Response.Redirect("~/app/Login.aspx");
         }
         else
         {
             Session["cuenta"] = null;
-
-            System.Diagnostics.Debug.WriteLine("ERROR");
+            Session["nombres"] = null;
+            Session["apellidos"] = null;
+            Session["dpi"] = null;
+            Session["password"] = null;
+            Session["saldo"] = null;
+            Session["correo"] = null;
+                     
+            Session["error_login"] = "Error. No. de cuenta o password incorrecto.";
             Response.Redirect("~/app/Login.aspx");
         }
     }

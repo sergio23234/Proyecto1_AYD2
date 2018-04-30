@@ -18,6 +18,8 @@
     </asp:TextBox><br /><br />
 
     <asp:Button ID="btentrar" runat="server" Text="Entrar" OnClick="btentrar_Click" />
+    <br />
+    <asp:Label id="lb_error" style="color=red" runat="server"><%:Session["error_login"]%></asp:Label>
     
 </asp:Content>
 
