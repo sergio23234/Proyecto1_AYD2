@@ -64,7 +64,7 @@ public partial class app_Login : System.Web.UI.Page
             Session["correo"] = correo;
             Session["error_login"] = null;
             Response.Write("<script>alert('Bienvenido " + nombres + " " + apellidos +"');</script>");
-            Response.Redirect("~/app/Login.aspx");
+            Response.Redirect("~/app/Perfil.aspx");
         }
         else
         {
