@@ -53,7 +53,7 @@ public partial class app_Login : System.Web.UI.Page
 
             cuenta = txtcuenta.Text;
 
-            System.Diagnostics.Debug.WriteLine(nombres + " - " + apellidos + " - " + dpi);
+            con.Close();
 
             Session["cuenta"] = cuenta;
             Session["nombres"] = nombres;
@@ -75,6 +75,8 @@ public partial class app_Login : System.Web.UI.Page
             Session["password"] = null;
             Session["saldo"] = null;
             Session["correo"] = null;
+
+            con.Close();
                      
             Session["error_login"] = "Error. No. de cuenta o password incorrecto.";
             Response.Redirect("~/app/Login.aspx");
