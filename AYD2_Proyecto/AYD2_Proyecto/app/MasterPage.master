@@ -22,7 +22,7 @@
                 <ul>
                     <li id="li_login" runat="server"><a href="Login.aspx">Log in</a></li>
                     <li id="li_registro" runat="server"><a href="#">Reginstro</a></li>
-                    <li id="li_perfil" runat="server"><a href="#">Perfil</a></li>
+                    <li id="li_perfil" runat="server"><a href="Perfil.aspx">Perfil</a></li>
                 </ul>
             </div>       
             
