@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="app_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title>Sistema Bancario</title>
+    <link href="Styles/Main.css" rel="stylesheet" type="text/css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+            <div id="header">
+                <div class="headtitle">Sistema Bancario</div>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="Login.aspx">Inicio</a></li>
+                    <li id="li_login" runat="server"><a href="Login.aspx">Log in</a></li>
+                    <li><a href="#">Reginstro</a></li>
+                </ul>
+            </div>       
+            
+            <div id="content">
+                <div id="insidecontent">
+                    <br>
+                    <asp:Label ID="lbusuario" runat="server"><%:Session["nombres"]%> - <%:Session["cuenta"]%></asp:Label>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+                    </asp:ContentPlaceHolder>                    
+                </div>
+                <div style="clear:both;"></div>                
+            </div>
+            <div id="footer">
+
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
