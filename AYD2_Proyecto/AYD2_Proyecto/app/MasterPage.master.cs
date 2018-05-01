@@ -12,10 +12,12 @@ public partial class app_MasterPage : System.Web.UI.MasterPage
         if(Session["cuenta"] == null)
         {
             li_login.Visible = true;
+            li_registro.Visible = true;
         }
         else
         {
             li_login.Visible = false;
+            li_registro.Visible = false;
         }
     }
 }
