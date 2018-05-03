@@ -33,6 +33,7 @@
                 <div id="insidecontent">
                     <br>
                     <asp:Label ID="lbusuario" runat="server"><%:Session["nombres"] + " " + Session["apellidos"]%> - <%:Session["cuenta"]%></asp:Label>
+                    <br />
                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
             
                     </asp:ContentPlaceHolder>                    
