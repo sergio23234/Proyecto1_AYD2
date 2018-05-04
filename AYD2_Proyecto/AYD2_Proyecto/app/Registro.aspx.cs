@@ -39,7 +39,7 @@ public partial class app_Registro : System.Web.UI.Page
         string query = "INSERT INTO Usuario (Nombre,Apellido,DPI,Saldo,Correo,Password) VALUES('";
         query += txtNombre.Text + "','";
         query += txtApellido.Text + "','";
-        query += txtDPI.Text + "',";
+        query += txtDPI.Text + "', '";
         query += txtSaldo.Text + "','";
         query += txtCorreo.Text + "','";
         query += txtContra.Text;

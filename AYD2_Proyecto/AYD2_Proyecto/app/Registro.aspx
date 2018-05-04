@@ -14,7 +14,7 @@
         </asp:TextBox><br /><br />
 
         <asp:Label runat="server"><h3>Apellidos</h3></asp:Label>
-        <asp:TextBox ID="txtApellido" textmode="Password" runat="server">
+        <asp:TextBox ID="txtApellido" runat="server">
 
         </asp:TextBox><br /><br />
 
@@ -28,7 +28,7 @@
         <asp:TextBox ID="txtCorreo" textmode="Email" runat="server"></asp:TextBox><br /><br />
 
         <asp:Label runat="server"><h3>Contraseña</h3></asp:Label>
-        <asp:TextBox ID="txtContra" runat="server">
+        <asp:TextBox ID="txtContra" textmode="Password" runat="server">
 
         </asp:TextBox><br /><br />
 
