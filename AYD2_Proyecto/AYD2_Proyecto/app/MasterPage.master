@@ -21,9 +21,9 @@
             <div id="menu">
                 <ul>
                     <li id="li_login" runat="server"><a href="Login.aspx">Log in</a></li>
-                    <li id="li_registro" runat="server"><a href="#">Reginstro</a></li>
+                    <li id="li_registro" runat="server"><a href="Registro.aspx">Registro</a></li>
                     <li id="li_perfil" runat="server"><a href="Perfil.aspx">Perfil</a></li>
-                    <li id="li_consultar" runat="server"><a href="#">Consultar Saldo</a></li>
+                    <li id="li_consultar" runat="server"><a href="Consultar_saldo.aspx">Consultar Saldo</a></li>
                     <li id="li_transferencia" runat="server"><a href="Transferencia.aspx">Transferencia Monetaria</a></li>
                     <li id="li_salir" runat="server"><a href="Logout.aspx">Salir</a></li>
                 </ul>

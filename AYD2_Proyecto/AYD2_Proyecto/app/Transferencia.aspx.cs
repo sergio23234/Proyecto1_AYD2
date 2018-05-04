@@ -30,7 +30,16 @@ public partial class app_Transaccion : System.Web.UI.Page
 
     protected void bttrans_Click(object sender, EventArgs e)
     {
-        double monto = Convert.ToDouble(txtMonto.Text);
+        double monto;
+        if (txtMonto.Text == "")
+        {
+            monto = 0;
+        }
+        else
+        {
+            monto = Convert.ToDouble(txtMonto.Text);
+        }
+
         string cuenta_destino = ddlist.SelectedValue.ToString();
 
         System.Diagnostics.Debug.WriteLine(cuenta_destino + " - " + monto.ToString());
@@ -42,23 +51,35 @@ public partial class app_Transaccion : System.Web.UI.Page
         }
         else
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
-            con.Open();
-            string query = "UPDATE Usuario SET saldo = saldo + " + monto + " WHERE Cuenta = '" + cuenta_destino + "' ";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.ExecuteScalar();
+            transferir_monto(monto, cuenta_destino);
 
-            query = "UPDATE Usuario SET saldo = saldo - " + monto + " WHERE Cuenta = '" + Session["cuenta"] + "' ";
-            cmd = new SqlCommand(query, con);
-            cmd.ExecuteScalar();
-
-            Session["saldo"] = (Convert.ToDouble(Session["saldo"].ToString()) - monto).ToString();
-
-            Session["error_transferencia"] = "Transferencia realizada con exito.";
-            txtMonto.Text = "";
-            //Response.Redirect("~/app/Transferencia.aspx");
-
-            con.Close();
+            descontar_monto(monto);
         }
+    }
+
+    private void transferir_monto(double monto, string cuenta_destino)
+    {
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
+        con.Open();
+        string query = "UPDATE Usuario SET saldo = saldo + " + monto + " WHERE Cuenta = '" + cuenta_destino + "' ";
+        SqlCommand cmd = new SqlCommand(query, con);
+        cmd.ExecuteScalar();
+        con.Close();
+    }
+
+    private void descontar_monto(double monto)
+    {
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
+        con.Open();
+        string query = "UPDATE Usuario SET saldo = saldo - " + monto + " WHERE Cuenta = '" + Session["cuenta"] + "' ";
+        SqlCommand cmd = new SqlCommand(query, con);
+        cmd.ExecuteScalar();
+
+        Session["saldo"] = (Convert.ToDouble(Session["saldo"].ToString()) - monto).ToString();
+
+        Session["error_transferencia"] = "Transferencia realizada con exito.";
+        txtMonto.Text = "";
+
+        con.Close();
     }
 }
