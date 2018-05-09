@@ -17,14 +17,19 @@ public partial class app_Login : System.Web.UI.Page
 
     protected void btentrar_Click(object sender, EventArgs e)
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
-        con.Open();
-        string query = "SELECT COUNT(*) FROM Usuario WHERE Cuenta = '" + txtcuenta.Text + "' and Password = '" + txtpassword.Text + "'";
-        SqlCommand cmd = new SqlCommand(query, con);
-        string resultado = cmd.ExecuteScalar().ToString();
+        //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
+        //con.Open();
+        //string query = "SELECT COUNT(*) FROM Usuario WHERE Cuenta = '" + txtcuenta.Text + "' and Password = '" + txtpassword.Text + "'";
+        //SqlCommand cmd = new SqlCommand(query, con);
+        Manejo man = new Manejo();
+        string resultado = man.Verificar_Usuario(txtcuenta.Text,txtpassword.Text);
 
         if (resultado == "1")
         {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
+            con.Open();
+            String query;
+            SqlCommand cmd;
             String nombres, apellidos, cuenta, dpi, saldo, correo, password;
 
             query = "SELECT Nombre FROM Usuario WHERE Cuenta = '" + txtcuenta.Text + "' and Password = '" + txtpassword.Text + "'";
@@ -75,11 +80,10 @@ public partial class app_Login : System.Web.UI.Page
             Session["password"] = null;
             Session["saldo"] = null;
             Session["correo"] = null;
-
-            con.Close();
                      
             Session["error_login"] = "Error. No. de cuenta o password incorrecto.";
             Response.Redirect("~/app/Login.aspx");
         }
     }
+
 }
