@@ -38,6 +38,7 @@ namespace Proyecto1_ayd2
             if(resultado == true)
             {
                 MessageBox.Show("CORRECTO");
+                
             }
             else
             {

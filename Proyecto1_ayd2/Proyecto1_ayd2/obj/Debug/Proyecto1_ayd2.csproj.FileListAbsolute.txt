@@ -20,3 +20,15 @@ C:\Users\Luis G\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\ob
 C:\Users\Luis G\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.csproj.CoreCompileInputs.cache
 C:\Users\Luis G\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.exe
 C:\Users\Luis G\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.pdb
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\bin\Debug\Proyecto1_ayd2.exe.config
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\bin\Debug\Proyecto1_ayd2.exe
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\bin\Debug\Proyecto1_ayd2.pdb
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.csprojResolveAssemblyReference.cache
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.consultar_saldo.resources
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Form1.resources
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Properties.Resources.resources
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Registro.resources
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.csproj.GenerateResource.cache
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.csproj.CoreCompileInputs.cache
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.exe
+C:\Users\Carminia\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.pdb

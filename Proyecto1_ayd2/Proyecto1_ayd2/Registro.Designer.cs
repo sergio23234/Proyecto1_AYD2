@@ -192,7 +192,7 @@
             // 
             // entrar
             // 
-            this.entrar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.entrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.entrar.Location = new System.Drawing.Point(58, 376);
             this.entrar.Margin = new System.Windows.Forms.Padding(2);
             this.entrar.Name = "entrar";
@@ -203,7 +203,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button1.Location = new System.Drawing.Point(224, 376);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
