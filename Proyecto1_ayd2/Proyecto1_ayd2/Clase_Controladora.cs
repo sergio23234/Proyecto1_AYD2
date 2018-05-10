@@ -11,7 +11,7 @@ namespace Proyecto1_ayd2
     public class Clase_Controladora
     {
         private static String cadena_conexion = "Server=tcp:grupo7proyecto.database.windows.net,1433;Initial Catalog=Proyecto;Persist Security Info=False;User ID=Adming7;Password=Ayd2Grupo7.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-
+        
         //Variables de sesion
         public static string usr_cuenta, usr_password, usr_nombre, usr_apellido, usr_dpi, usr_saldo, usr_correo;        
 
@@ -21,19 +21,44 @@ namespace Proyecto1_ayd2
             return con;
         }
 
-        public static bool Login(string cuenta, string password)
+        /*
+         *Metodo para realizar la conexion con la base de datos
+         * @cadena es el query a ejecutar
+         * retorna un string con la informacion  obtenida
+         */
+        public static string conectar(String cadena)
         {
-            SqlConnection con = conectar();
-            con.Open();
-            string query = "SELECT COUNT(*) FROM Usuario WHERE No_Cuenta = '" + cuenta + "' and contra = '" + password + "'";
-            SqlCommand cmd = new SqlCommand(query, con);
-            string resultado = cmd.ExecuteScalar().ToString();
-
-            if(resultado == "1")
+            try
             {
-                query = "SELECT Nombre, Apellidos, DPI, No_Cuenta, Saldo, correo, contra FROM Usuario WHERE No_Cuenta = '" + cuenta + "' and contra = '" + password + "'";
-                cmd = new SqlCommand(query, con);
-                using(SqlDataReader reader = cmd.ExecuteReader())
+                SqlConnection con = conectar();
+                con.Open();
+                string query = cadena;
+                SqlCommand cmd = new SqlCommand(query, con);
+                return cmd.ExecuteScalar().ToString();
+
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.ToString());
+            }
+            return "";
+
+        }
+
+        /*
+         *variablesSesion para insertar las variables de sesion del login
+         * @cuenta el numero para ingresar como usuario 
+         * @password para ingresar como usuario 
+         */
+        public static void variablesSesion(string cuenta, string password)
+        {
+            try
+            {
+                SqlConnection con = conectar();
+                con.Open();
+                string query = "SELECT Nombre, Apellidos, DPI, No_Cuenta, Saldo, correo, contra FROM Usuario WHERE No_Cuenta = '" + cuenta + "' and contra = '" + password + "'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     reader.Read();
                     usr_cuenta = cuenta;
@@ -43,7 +68,26 @@ namespace Proyecto1_ayd2
                     usr_dpi = reader["DPI"].ToString();
                     usr_saldo = reader["Saldo"].ToString();
                     usr_correo = reader["correo"].ToString();
+
                 }
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.ToString());
+            }
+            
+        }
+
+        public static bool Login(string cuenta, string password)
+        {
+            SqlConnection con = conectar();
+            con.Open();
+            string query = "SELECT COUNT(*) FROM Usuario WHERE No_Cuenta = '" + cuenta + "' and contra = '" + password + "'";
+            string resultado = conectar(query);
+
+            if (resultado == "1")
+            {
+                variablesSesion(cuenta, password);
                 return true;
             }
             else
@@ -51,5 +95,29 @@ namespace Proyecto1_ayd2
                 return false;
             }
         }
+
+        
+
+        /*
+         * retornar_saldo()
+         * metodo para retornar el saldo del usuario logeado
+         */
+        public static string retornar_saldo() {
+
+            return usr_saldo;           
+            
+        }
+
+        /*
+         * retornar_nombre()
+         * metodo para retornar el nombre y apellido del usuario logeado
+         */
+
+        public static string retornar_nombre()
+        {
+
+            return usr_nombre + " " + usr_apellido;
+        }
+
     }
 }
