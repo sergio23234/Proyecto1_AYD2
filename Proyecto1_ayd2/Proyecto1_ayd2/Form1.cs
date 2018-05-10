@@ -34,7 +34,7 @@ namespace Proyecto1_ayd2
             string cuenta = textcuenta.Text;
             string password = textcontra.Text;
 
-            bool resultado = Clase_Controladora.login(cuenta, password);
+            bool resultado = Clase_Controladora.Login(cuenta, password);
             if(resultado == true)
             {
                 MessageBox.Show("CORRECTO");
