@@ -28,5 +28,21 @@ namespace Proyecto1_ayd2
             reg.Show();
             this.Hide();
         }
+
+        private void entrar_Click(object sender, EventArgs e)
+        {
+            string cuenta = textcuenta.Text;
+            string password = textcontra.Text;
+
+            bool resultado = Clase_Controladora.login(cuenta, password);
+            if(resultado == true)
+            {
+                MessageBox.Show("CORRECTO");
+            }
+            else
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
     }
 }
