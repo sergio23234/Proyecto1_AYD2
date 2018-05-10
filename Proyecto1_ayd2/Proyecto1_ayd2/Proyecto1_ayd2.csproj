@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clase_Controladora.cs" />
+    <Compile Include="consultar_saldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultar_saldo.Designer.cs">
+      <DependentUpon>consultar_saldo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="consultar_saldo.resx">
+      <DependentUpon>consultar_saldo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
