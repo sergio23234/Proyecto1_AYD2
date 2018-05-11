@@ -22,7 +22,7 @@ namespace Pruebas_unitarias
         public void Prueba_Saldo()
         {
             String prueba = Clase_Controladora.Retornar_saldo("1");
-            String respuesta = "500";
+            String respuesta = "600";
             Console.WriteLine(prueba);
             Assert.AreEqual(prueba, respuesta);
         }
