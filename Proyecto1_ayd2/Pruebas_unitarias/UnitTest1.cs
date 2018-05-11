@@ -35,5 +35,40 @@ namespace Pruebas_unitarias
             
             Assert.AreEqual(prueba.Trim().ToLower(), respuesta.Trim().ToLower());
         }
+        /* Pruebas unitarias para Registro */
+        [TestMethod]
+        public void Prueba_Correo()
+        {
+            String correo = "@yahoo.com";
+            Assert.IsFalse(Clase_Controladora.validarCorreo(correo));
+            correo = "usuario@.com";
+            Assert.IsFalse(Clase_Controladora.validarCorreo(correo));
+            correo = "usuario.com";
+            Assert.IsFalse(Clase_Controladora.validarCorreo(correo));
+            correo = "usuario@correo.com";
+            Assert.IsTrue(Clase_Controladora.validarCorreo(correo));
+        }
+
+        [TestMethod]
+        public void Prueba_Ingresar_Saldo()
+        {
+            String saldo = "hola jeje";
+            Assert.IsFalse(Clase_Controladora.validarSaldo(saldo));
+            saldo = "1000";
+            Assert.IsTrue(Clase_Controladora.validarSaldo(saldo));
+        }
+
+        [TestMethod]
+        public void Prueba_Registro()
+        {
+            String nombre = "Usuario";
+            String apellido = "Apellido";
+            String DPI = "123456";
+            String contra = "123456";
+            String correo = "a@b.com";
+            String saldo = "saldo";
+            Object respuesta = Clase_Controladora.registrarse(nombre,apellido,contra,DPI,correo,saldo);
+            Assert.IsNull(respuesta);
+        }
     }
 }
