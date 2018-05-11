@@ -122,6 +122,71 @@ namespace Proyecto1_ayd2
             return resultado;            
         }
 
+
+        public static DataTable getcuentas() {
+
+         //   SqlDataAdapter table = new SqlDataAdapter();
+
+
+                        //Declaración de variables requeridas
+                        SqlConnection connection = new SqlConnection();
+                        SqlDataAdapter adapter = new SqlDataAdapter(); ;                        
+                        SqlCommand SQLcmd = new SqlCommand();
+                        DataTable table = new DataTable();
+
+                        // obtener la cadena de conexion con el servidor BD
+                        connection.ConnectionString = "Server=tcp:grupo7proyecto.database.windows.net,1433;Initial Catalog=Proyecto;Persist Security Info=False;User ID=Adming7;Password=Ayd2Grupo7.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+                        //Asignación de propiedades
+                        SQLcmd.Connection = connection;
+                        SQLcmd.CommandType = CommandType.Text;
+                        // formar la consulta sql
+                        SQLcmd.CommandText = "select * from [Proyecto].[dbo].Usuario order by No_Cuenta Desc";
+
+                        // Ejecutar la consulta
+                        adapter.SelectCommand = SQLcmd;
+
+                        //Intento de llenado de datos hacia la variable 'table'
+                        try
+                        {
+                            // rellenar la tabla con los datos de la consulta
+                            adapter.Fill(table);
+                        }
+                        catch (SqlException ex)
+                        {
+                // mostrar error
+                            System.Windows.Forms.MessageBox.Show(ex.Message);
+                        }
+                        catch (Exception ex)
+                        {
+                // mostrar error
+                           System.Windows.Forms.MessageBox.Show(ex.Message);
+                        }
+            
+            
+
+            return table;
+        }
+
+
+
+        public static void UpdateMoney(string cuentaDestino, string montoDestino, string CuentaOri, string montoOrig)
+        {
+            int Lacuenta = Int32.Parse(cuentaDestino);
+            int elmonto = Int32.Parse(montoDestino);
+
+
+            string query = "update Usuario set Saldo = Saldo  +'"+ montoDestino +"'  WHERE No_Cuenta = '" + cuentaDestino + "'";
+            string resultado = conectar(query);
+
+
+            string query2 = "update Usuario set Saldo = '" + montoOrig + "'  WHERE No_Cuenta = '" + CuentaOri + "'";
+            string resultado2 = conectar(query2);
+
+        }
+
+
+
         public static string getNombre()
         {
             return usr_nombre;

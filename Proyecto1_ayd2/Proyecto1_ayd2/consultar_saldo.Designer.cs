@@ -39,19 +39,19 @@
             // lb_name
             // 
             this.lb_name.AutoSize = true;
-            this.lb_name.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_name.Location = new System.Drawing.Point(25, 19);
             this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(0, 18);
+            this.lb_name.Size = new System.Drawing.Size(0, 20);
             this.lb_name.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(35, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 18);
+            this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Saldo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -60,7 +60,7 @@
             // 
             this.lb_saldo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.lb_saldo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lb_saldo.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, System.Drawing.FontStyle.Bold);
+            this.lb_saldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lb_saldo.Location = new System.Drawing.Point(108, 62);
             this.lb_saldo.Name = "lb_saldo";
             this.lb_saldo.Size = new System.Drawing.Size(150, 18);
@@ -88,6 +88,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "consultar_saldo";
             this.Text = "Saldo";
+            this.Load += new System.EventHandler(this.consultar_saldo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
