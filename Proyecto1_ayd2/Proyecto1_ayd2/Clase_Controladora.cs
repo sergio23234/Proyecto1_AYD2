@@ -96,8 +96,6 @@ namespace Proyecto1_ayd2
             }
         }
 
-        
-
         /*
          * retornar_saldo()
          * metodo para retornar el saldo del usuario logeado
@@ -145,6 +143,63 @@ namespace Proyecto1_ayd2
         public static string getCorreo()
         {
             return usr_correo;
+        }
+
+        public static bool validarSaldo(String saldo)
+        {
+            try
+            {
+                int valor = Convert.ToInt32(saldo);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public static bool validarCorreo(String correo)
+        {
+            if (correo.Contains("@") && correo.Contains(".com") && correo.Length > 7)
+            {
+                string[] vals = correo.Split('@');
+                if (vals.Length == 2)
+                    if (vals[0].Length > 0 && vals[1].Contains(".com") && vals[1].Length > 5)
+                        return true;
+                return false;
+            }
+            return false;
+        }
+
+        public static string registrarse(string nombre, string apellido, string contra, string dpi, string correo, string saldo)
+        {
+            try
+            {
+                SqlConnection con = conectar();
+                con.Open();
+                string query = "INSERT INTO Usuario (Nombre,Apellidos,DPI,Saldo,Correo,Contra) VALUES('";
+                query += nombre + "','";
+                query += apellido + "','";
+                query += dpi + "','";
+                query += saldo + "','";
+                query += correo + "','";
+                query += contra;
+                query += "');";
+                SqlCommand cmd = new SqlCommand(query, con);
+                // Enviar peticion a la base de datos
+                cmd.ExecuteNonQuery();
+
+                // Obtener el numero de cuenta creado para el usuario
+                query = "SELECT No_Cuenta FROM Usuario WHERE DPI = '" + dpi + "' AND Correo = '" + correo + "';";
+                cmd = new SqlCommand(query, con);
+                String cuenta = cmd.ExecuteScalar().ToString();
+                return cuenta;
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
         }
     }
 }
