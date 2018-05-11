@@ -72,6 +72,12 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transferir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transferir.Designer.cs">
+      <DependentUpon>Transferir.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="consultar_saldo.resx">
       <DependentUpon>consultar_saldo.cs</DependentUpon>
     </EmbeddedResource>
