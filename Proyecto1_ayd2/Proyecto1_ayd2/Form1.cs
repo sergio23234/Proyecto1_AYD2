@@ -37,12 +37,18 @@ namespace Proyecto1_ayd2
             bool resultado = Clase_Controladora.Login(cuenta, password);
             if(resultado == true)
             {
-                MessageBox.Show("CORRECTO");
-                
+                MessageBox.Show("Bienvenido " + Clase_Controladora.getNombre() + " " + Clase_Controladora.getApellido());
+                textcuenta.Clear();
+                textcontra.Clear();
+                Perfil perfil = new Perfil(this);
+                perfil.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("ERROR");
+                MessageBox.Show("ERROR\nEl nombre de usuario o el password son incorrectos");
+                textcontra.Clear();
+                textcuenta.Clear();
             }
         }
     }

@@ -73,6 +73,7 @@
             // 
             this.textcontra.Location = new System.Drawing.Point(166, 234);
             this.textcontra.Name = "textcontra";
+            this.textcontra.PasswordChar = '*';
             this.textcontra.Size = new System.Drawing.Size(141, 20);
             this.textcontra.TabIndex = 3;
             // 

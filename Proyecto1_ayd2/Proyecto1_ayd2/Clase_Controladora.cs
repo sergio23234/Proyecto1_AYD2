@@ -103,7 +103,7 @@ namespace Proyecto1_ayd2
          * metodo para retornar el saldo del usuario logeado
          */
         public static string retornar_saldo() {
-            string query = "SELECT Saldo FROM Usuario WHERE No_Cuenta = '" + cuenta + "' and contra = '" + password + "'";
+            string query = "SELECT Saldo FROM Usuario WHERE No_Cuenta = '" + usr_cuenta + "' and contra = '" + usr_password + "'";
             string resultado = conectar(query);
             return resultado;           
             
@@ -116,13 +116,36 @@ namespace Proyecto1_ayd2
 
         public static string retornar_nombre()
         {
-            string query = "SELECT Nombre FROM Usuario WHERE No_Cuenta = '" + cuenta + "' and contra = '" + password + "'";
+            string query = "SELECT Nombre FROM Usuario WHERE No_Cuenta = '" + usr_cuenta + "' and contra = '" + usr_password + "'";
             string resultado = conectar(query);
-            query = "SELECT Apellido FROM Usuario WHERE No_Cuenta = '" + cuenta + "' and contra = '" + password + "'";
+            query = "SELECT Apellido FROM Usuario WHERE No_Cuenta = '" + usr_cuenta + "' and contra = '" + usr_password + "'";
             resultado = resultado + " " + conectar(query);
-            return resultado;
-            
+            return resultado;            
         }
 
+        public static string getNombre()
+        {
+            return usr_nombre;
+        }
+
+        public static string getApellido()
+        {
+            return usr_apellido;
+        }
+
+        public static string getCuenta()
+        {
+            return usr_cuenta;
+        }
+
+        public static string getDpi()
+        {
+            return usr_dpi;
+        }
+
+        public static string getCorreo()
+        {
+            return usr_correo;
+        }
     }
 }
