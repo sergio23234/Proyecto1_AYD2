@@ -23,10 +23,5 @@ namespace Proyecto1_ayd2
         {
 
         }
-
-        private void consultar_saldo_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

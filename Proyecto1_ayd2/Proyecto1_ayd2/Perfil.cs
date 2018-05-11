@@ -39,9 +39,7 @@ namespace Proyecto1_ayd2
 
         private void btTransferencia_Click(object sender, EventArgs e)
         {
-            Transferir transferencia = new Transferir();
-            transferencia.Show();
-            this.Hide();
+
         }
 
         private void btSalir_Click(object sender, EventArgs e)
