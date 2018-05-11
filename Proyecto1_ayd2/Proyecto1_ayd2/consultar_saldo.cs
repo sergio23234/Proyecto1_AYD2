@@ -15,8 +15,8 @@ namespace Proyecto1_ayd2
         public consultar_saldo()
         {
             InitializeComponent();
-            lb_name.Text = Clase_Controladora.retornar_nombre();
-            lb_saldo.Text = Clase_Controladora.retornar_saldo();
+            lb_name.Text = Clase_Controladora.Retornar_nombre(Clase_Controladora.usr_cuenta);
+            lb_saldo.Text = Clase_Controladora.Retornar_saldo(Clase_Controladora.usr_cuenta);
         }
 
         private void label1_Click(object sender, EventArgs e)
