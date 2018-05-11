@@ -46,3 +46,4 @@ C:\Users\sergi\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj
 C:\Users\sergi\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.pdb
 C:\Users\Luis G\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.consultar_saldo.resources
 C:\Users\Luis G\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Perfil.resources
+C:\Users\sergi\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Perfil.resources
