@@ -10,6 +10,7 @@ namespace Proyecto1_ayd2
 {
     public class Clase_Controladora
     {
+        // Esta es la clase controladora!!! 
         private static String cadena_conexion = "Server=tcp:grupo7proyecto.database.windows.net,1433;Initial Catalog=Proyecto;Persist Security Info=False;User ID=Adming7;Password=Ayd2Grupo7.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         
         //Variables de sesion
