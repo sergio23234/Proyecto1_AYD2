@@ -15,6 +15,7 @@ namespace Proyecto1_ayd2
         public Transferir()
         {
             InitializeComponent();
+<<<<<<< HEAD
 
            // Clase_Controladora getUsrs = new Clase_Controladora();
             DataTable tabla = Clase_Controladora.getcuentas();
@@ -62,5 +63,8 @@ namespace Proyecto1_ayd2
         {
 
         }
+=======
+        }
+>>>>>>> master
     }
 }
