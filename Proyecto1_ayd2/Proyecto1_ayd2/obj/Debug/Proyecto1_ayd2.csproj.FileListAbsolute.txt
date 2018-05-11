@@ -47,3 +47,17 @@ C:\Users\sergi\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj
 C:\Users\Luis G\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.consultar_saldo.resources
 C:\Users\Luis G\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Perfil.resources
 C:\Users\sergi\Documents\GitHub\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Perfil.resources
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\bin\Debug\Proyecto1_ayd2.exe.config
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\bin\Debug\Proyecto1_ayd2.exe
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\bin\Debug\Proyecto1_ayd2.pdb
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.csprojResolveAssemblyReference.cache
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.consultar_saldo.resources
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Form1.resources
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Perfil.resources
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Properties.Resources.resources
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Registro.resources
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.Transferir.resources
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.csproj.GenerateResource.cache
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.csproj.CoreCompileInputs.cache
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.exe
+C:\Users\chext\source\repos\lab01\Proyecto1_AYD2\Proyecto1_ayd2\Proyecto1_ayd2\obj\Debug\Proyecto1_ayd2.pdb
